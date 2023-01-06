@@ -1,8 +1,10 @@
+import styles from '../styles/thumb.module.css';
+
 function Thumb(props) {
     return (
-        <div className="">
-            <p>{props.accomodationTitle}</p>
-            <img src={props.cover} alt="le logement" />
+        <div className={styles.thumb}>
+            <p>{props.accomodation.title}</p>
+            <img src={props.accomodation.cover} alt="le logement" />
         </div>
     );
 }

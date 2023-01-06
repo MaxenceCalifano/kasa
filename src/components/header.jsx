@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 function Header() {
 
     let location = useLocation();
-    console.log("🚀 ~ file: header.jsx:8 ~ Header ~ location", location)
     const [currentPage, setCurrentPage] = useState();
 
     useEffect(() => {
