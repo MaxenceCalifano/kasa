@@ -1,0 +1,26 @@
+@import './vars.css';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.header span {
+    font-size: var(--h1-font-size);
+}
+
+.header a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header a:visited {
+    color: var(--primary-color);
+}
+
+.header a.currentPageLink {
+    text-decoration: underline;
+}
