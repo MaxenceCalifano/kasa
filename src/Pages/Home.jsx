@@ -16,10 +16,7 @@ function Home() {
     return (
         <div>
             <div className={styles.banner}>
-                <div className={styles.overlay}>
-                    <p>Chez vous, partout et ailleurs</p>
-                </div>
-                <div className={styles.backgroundImage}></div>
+                <p>Chez vous, partout et ailleurs</p>
             </div>
             <div className={styles.thumbs}>
                 {listOfAccomodations}
