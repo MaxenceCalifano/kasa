@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import { Outlet } from "react-router";
+import '../styles/index.css'
 
 function Root() {
     return (
