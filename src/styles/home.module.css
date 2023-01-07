@@ -29,3 +29,10 @@
     background: center / cover no-repeat url("../assets/banner.png");
     background-clip: content-box;
 }
+
+.thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}

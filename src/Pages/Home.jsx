@@ -21,7 +21,9 @@ function Home() {
                 </div>
                 <div className={styles.backgroundImage}></div>
             </div>
-            {listOfAccomodations}
+            <div className={styles.thumbs}>
+                {listOfAccomodations}
+            </div>
         </div>
     );
 }
