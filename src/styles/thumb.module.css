@@ -5,6 +5,7 @@
     overflow: hidden;
     position: relative;
     margin: 1em 0;
+    text-decoration: none;
 }
 
 .thumb>* {

@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import Root from './Pages/Root';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Accommodation from './Pages/Accommodation';
 import ErrorPage from './Pages/ErrorPage';
 
 import './styles/index.css';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path:"/about",
         element: <About />
+      },
+      {
+        path:"/accommodation/:id",
+        element: <Accommodation />
       }
     ]
   }

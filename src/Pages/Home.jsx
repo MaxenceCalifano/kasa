@@ -12,7 +12,6 @@ function Home() {
 
     const listOfAccomodations = accomodations.map((accomodation) => <Thumb key={accomodation.id} accomodation={accomodation} />)
 
-    console.log(accomodations)
     return (
         <main>
             <div className={styles.banner}>
