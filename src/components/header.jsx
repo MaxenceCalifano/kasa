@@ -17,7 +17,7 @@ function Header() {
     return (
         <div className={styles.header}>
             <div>
-                <Logo />
+                <Logo color={"#FF6060"} />
             </div>
             <nav>
                 <Link to="/" className={currentPage === "home" ? styles.currentPageLink : ""} >Accueil</Link>

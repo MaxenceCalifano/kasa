@@ -10,18 +10,18 @@ function Home() {
             .then(res => setAccomodations(res))
     }, [])
 
-    const listOfAccomodations = accomodations.map((accomodation, key) => <Thumb key={accomodation.id} accomodation={accomodation} />)
+    const listOfAccomodations = accomodations.map((accomodation) => <Thumb key={accomodation.id} accomodation={accomodation} />)
 
     console.log(accomodations)
     return (
-        <div>
+        <main>
             <div className={styles.banner}>
                 <p>Chez vous, partout et ailleurs</p>
             </div>
             <div className={styles.thumbs}>
                 {listOfAccomodations}
             </div>
-        </div>
+        </main>
     );
 }
 
