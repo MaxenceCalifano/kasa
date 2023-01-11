@@ -1,0 +1,10 @@
+@import './vars.css';
+
+.tag {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px;
+    min-width: 115px;
+    text-align: center;
+}
