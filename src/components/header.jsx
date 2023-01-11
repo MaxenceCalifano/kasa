@@ -10,9 +10,9 @@ function Header() {
 
     useEffect(() => {
         if (location.pathname === "/") setCurrentPage("home")
-        if (location.pathname === "/about") setCurrentPage("about")
+        else if (location.pathname === "/about") setCurrentPage("about")
+        else setCurrentPage("else")
     }, [location])
-
 
     return (
         <div className={styles.header}>
