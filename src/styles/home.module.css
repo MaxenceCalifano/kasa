@@ -14,11 +14,12 @@ main {
     background: center / cover no-repeat url("../assets/banner.png");
     background-clip: content-box;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .banner p {
     position: relative;
-    top: 50%;
     text-align: center;
     z-index: 2;
     color: white;

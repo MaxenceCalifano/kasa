@@ -29,7 +29,7 @@ function Accommodation() {
                     <Tag key={key} tag={tag} />
                 ))}
             </div>
-            <Dropdown title={"Descritption"} text={accommodation.description} />
+            <Dropdown title={"Description"} text={accommodation.description} open={true} />
         </div>
     );
 }
