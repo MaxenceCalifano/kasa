@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Tag from "../components/Tag";
+import Dropdown from "../components/Dropdown";
 
 import styles from '../styles/accommodation.module.css';
 
@@ -9,6 +10,7 @@ function Accommodation() {
     let { id } = useParams();
 
     const [accommodation, setAccommodation] = useState(null);
+    console.log("🚀 ~ file: Accommodation.jsx:13 ~ Accommodation ~ accommodation", accommodation)
 
     useEffect(() => {
         fetch('../logements.json')
@@ -27,7 +29,7 @@ function Accommodation() {
                     <Tag key={key} tag={tag} />
                 ))}
             </div>
-
+            <Dropdown title={"Descritption"} text={accommodation.description} />
         </div>
     );
 }

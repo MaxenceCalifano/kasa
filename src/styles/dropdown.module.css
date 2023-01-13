@@ -1,0 +1,21 @@
+@import './vars.css';
+
+.header {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chevron {
+    transform: rotate(180deg);
+    width: 20px;
+}
+
+p {
+    color: var(--primary-color);
+    padding: 10px;
+}

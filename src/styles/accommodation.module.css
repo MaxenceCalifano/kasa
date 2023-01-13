@@ -10,6 +10,10 @@
     color: var(--primary-color);
 }
 
+.location {
+    margin: 10px 0;
+}
+
 .tags {
     display: flex;
     justify-content: flex-start;
