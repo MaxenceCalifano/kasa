@@ -6,7 +6,6 @@ function Dropdown({ title, text, open }) {
 
     const [isOpen, setIsOpen] = useState(open)
     const [pStyles, setPStyles] = useState(isOpen ? styles.open : styles.close)
-    const [textHidden, setTextHidden] = useState(isOpen ? { display: 'block' } : { display: 'none' })
 
     useEffect(() => {
         if (isOpen) setPStyles(styles.open)
@@ -20,7 +19,7 @@ function Dropdown({ title, text, open }) {
                 <Chevron className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} />
             </div>
 
-            <p className={pStyles} onTransitionEnd={() => setTextHidden(isOpen ? { display: 'block' } : { display: 'none' })} style={textHidden}>
+            <p className={pStyles}>
                 {text}
             </p>
 

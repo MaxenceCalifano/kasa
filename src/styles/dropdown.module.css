@@ -27,12 +27,11 @@ p {
 }
 
 .open {
-    /* opacity: 1; */
-    max-height: 100px;
+    max-height: auto;
 }
 
 .close {
-    /* transform: scaleY(0); */
-    max-height: 0px;
-
+    max-height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
 }
