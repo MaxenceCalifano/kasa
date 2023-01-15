@@ -20,3 +20,14 @@
     gap: 10px;
     margin: 10px 0;
 }
+
+.dropdowns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.dropdowns>* {
+    flex: 1;
+}

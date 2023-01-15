@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .chevron {
@@ -20,18 +21,53 @@
     transform: rotate(0deg);
 }
 
-p {
+.textContent {
     color: var(--primary-color);
-    padding: 10px;
-    transition: all 250ms ease-in;
+    padding: 15px 10px;
+    transition: all 200ms ease-in;
+    transform-origin: top;
+    position: relative;
+    top: -5px;
+    z-index: -1;
+    background-color: #F6F6F6;
 }
 
-.open {
-    max-height: auto;
+.textContent[animationOpen] {
+    animation: dropdownOpen 250ms;
+}
+
+.textContent[animationClose] {
+    animation: dropdownClose 250ms;
 }
 
 .close {
     max-height: 0;
-    transform-origin: top;
     transform: scaleY(0);
+}
+
+li {
+    color: var(--primary-color);
+    transform-origin: top;
+}
+
+@keyframes dropdownOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dropdownClose {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
 }

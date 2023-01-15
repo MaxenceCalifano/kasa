@@ -1,28 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import { ReactComponent as Chevron } from '../assets/chevron.svg';
 import styles from '../styles/dropdown.module.css'
 
 function Dropdown({ title, text, open }) {
 
+    const hiddable = useRef(null)
     const [isOpen, setIsOpen] = useState(open)
-    const [pStyles, setPStyles] = useState(isOpen ? styles.open : styles.close)
 
-    useEffect(() => {
-        if (isOpen) setPStyles(styles.open)
-        if (!isOpen) setPStyles(styles.close)
-    }, [isOpen])
+    const toggle = () => {
+        //It's open and gonna close
+        if (isOpen) hiddable.current.setAttribute('animationClose', '')
+
+        //It's closed and gonna open
+        if (!isOpen) {
+            hiddable.current.style.display = "block"
+            hiddable.current.setAttribute('animationOpen', '')
+        }
+        setIsOpen(!isOpen)
+    }
+
+    const removeTransitionAttribute = () => {
+        if (isOpen) {
+            hiddable.current.removeAttribute('animationOpen')
+        }
+        if (!isOpen) {
+            hiddable.current.removeAttribute('animationClose')
+            hiddable.current.style.display = "none"
+        }
+    }
+
+    //Display or a list or a paragraph
+    const textContent = typeof text === 'string'
+        ? <p className={styles.textContent} onAnimationEnd={removeTransitionAttribute} ref={hiddable}>{text}</p>
+        : <ul className={styles.textContent} onAnimationEnd={removeTransitionAttribute} ref={hiddable}>{text.map((element, index) => <li key={index}>{element}</li>)}</ul>
+
 
     return (
         <div>
-            <div className={styles.header} onClick={() => setIsOpen(!isOpen)}>
+            <div className={styles.header} onClick={toggle}>
                 <span>{title}</span>
                 <Chevron className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} />
             </div>
 
-            <p className={pStyles}>
-                {text}
-            </p>
-
+            {textContent}
         </div>
     );
 }
