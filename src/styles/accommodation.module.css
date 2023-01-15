@@ -31,3 +31,9 @@
 .dropdowns>* {
     flex: 1;
 }
+
+.flexDivs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
