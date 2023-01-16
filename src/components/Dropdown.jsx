@@ -36,7 +36,7 @@ function Dropdown({ title, text, open }) {
 
 
     return (
-        <div>
+        <div className={styles.dropdown}>
             <div className={styles.header} onClick={toggle}>
                 <span>{title}</span>
                 <Chevron className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} />

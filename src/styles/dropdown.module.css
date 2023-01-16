@@ -1,5 +1,11 @@
 @import './vars.css';
 
+
+.dropdown {
+    max-width: 1023px;
+    margin: 2em auto;
+}
+
 .header {
     border-radius: 10px;
     background-color: var(--primary-color);
