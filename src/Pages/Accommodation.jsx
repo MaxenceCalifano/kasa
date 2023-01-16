@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Carrousel from "../components/Carrousel";
 import Tag from "../components/Tag";
 import Dropdown from "../components/Dropdown";
 import Rate from "../components/Rate";
@@ -24,6 +25,7 @@ function Accommodation() {
 
     return (
         <div>
+            <Carrousel pictures={accommodation.pictures} />
             <div className={styles.flexDivs}>
                 <div>
                     <p className={styles.title} >{accommodation.title}</p>
