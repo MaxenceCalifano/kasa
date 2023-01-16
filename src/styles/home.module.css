@@ -19,8 +19,7 @@ main {
 }
 
 .banner p {
-    position: relative;
-    text-align: center;
+    margin: auto;
     z-index: 2;
     color: white;
     font-size: var(--h1-font-size);

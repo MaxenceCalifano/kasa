@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Tag from "../components/Tag";
 import Dropdown from "../components/Dropdown";
 import Rate from "../components/Rate";
+import Host from "../components/Host";
 
 import styles from '../styles/accommodation.module.css';
 
@@ -23,8 +24,15 @@ function Accommodation() {
 
     return (
         <div>
-            <p className={styles.title} >{accommodation.title}</p>
-            <p className={styles.location} >{accommodation.location}</p>
+            <div className={styles.flexDivs}>
+                <div>
+                    <p className={styles.title} >{accommodation.title}</p>
+                    <p className={styles.location} >{accommodation.location}</p>
+                </div>
+
+                <Host name={accommodation.host.name} picture={accommodation.host.picture} />
+            </div>
+
             <div className={styles.flexDivs}>
                 <div className={styles.tags}>
                     {accommodation.tags.map((tag, key) => (

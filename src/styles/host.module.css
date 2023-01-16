@@ -1,0 +1,16 @@
+@import url('./vars.css');
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.image {
+    border-radius: 50%;
+    width: 64px;
+}
+
+.name {
+    color: var(--primary-color);
+}
