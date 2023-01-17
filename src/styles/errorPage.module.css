@@ -1,0 +1,22 @@
+@import url('../styles/vars.css');
+
+.errorPage {
+    margin: auto;
+    text-align: center;
+    max-width: 1240px;
+}
+
+.errorPage p,
+.errorPage a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.errorPage p:first-of-type {
+    font-weight: 700;
+    font-size: 288px;
+}
+
+.errorPage p:last-of-type {
+    font-size: 36px;
+}
