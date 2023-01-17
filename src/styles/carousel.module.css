@@ -23,7 +23,7 @@
 }
 
 .arrows {
-    position: fixed;
+    position: absolute;
     text-indent: -10000px;
     width: 48px;
     height: 415px;

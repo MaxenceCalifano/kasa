@@ -24,7 +24,7 @@ function Accommodation() {
     if (!accommodation) return null
 
     return (
-        <div>
+        <main className={styles.accommodation}>
             <Carrousel pictures={accommodation.pictures} />
             <div className={styles.flexDivs}>
                 <div>
@@ -51,7 +51,7 @@ function Accommodation() {
                 <Dropdown title={"Équipements"} text={accommodation.equipments} open={true} />
             </div>
 
-        </div>
+        </main>
     );
 }
 
