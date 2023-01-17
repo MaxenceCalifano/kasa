@@ -1,7 +1,43 @@
+.carousel {
+    margin: 20px 0;
+}
+
 .container {
     display: flex;
+    width: 80vw;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 25px;
 }
 
 .container img {
     height: 415px;
+    object-fit: cover;
+    width: 80vw;
+    flex-shrink: 0;
+    transition: margin 250ms ease;
+}
+
+.firstImage {
+    margin-left: 0;
+}
+
+.arrows {
+    position: fixed;
+    text-indent: -10000px;
+    width: 48px;
+    height: 415px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.leftArrow {
+    left: 12%;
+    background: url(../assets/left-arrow.png) center center / 48px 80px no-repeat;
+}
+
+.rightArrow {
+    right: 12%;
+    background: url(../assets/right-arrow.png) center center / 48px 80px no-repeat;
 }
