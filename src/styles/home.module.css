@@ -23,6 +23,7 @@ main {
     z-index: 2;
     color: white;
     font-size: var(--h1-font-size);
+    text-align: center;
 }
 
 .banner::after {

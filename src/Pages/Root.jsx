@@ -5,7 +5,11 @@ import Footer from "../components/Footer";
 
 function Root() {
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100vh'
+        }}>
             <Header />
             <Outlet />
             <Footer />
