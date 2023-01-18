@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ReactComponent as Chevron } from '../assets/chevron.svg';
 import styles from '../styles/dropdown.module.css'
 
@@ -6,6 +6,10 @@ function Dropdown({ title, text, open }) {
 
     const hiddable = useRef(null)
     const [isOpen, setIsOpen] = useState(open)
+
+    useEffect(() => {
+        isOpen ? hiddable.current.style.display = "block" : hiddable.current.style.display = "none"
+    }, [])
 
     const toggle = () => {
         //It's open and gonna close

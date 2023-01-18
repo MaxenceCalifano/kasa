@@ -59,7 +59,7 @@ li {
 @keyframes dropdownOpen {
     from {
         opacity: 0;
-        transform: translateY(-150px);
+        transform: translateY(-50px);
     }
 
     to {
@@ -74,6 +74,6 @@ li {
 
     to {
         opacity: 0;
-        transform: translateY(-150px);
+        transform: translateY(-50px);
     }
 }
