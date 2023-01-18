@@ -27,6 +27,12 @@
     transform: rotate(0deg);
 }
 
+.dropdown button {
+    border: none;
+    display: flex;
+    width: 100%;
+}
+
 .textContent {
     color: var(--primary-color);
     padding: 15px 10px;
