@@ -12,6 +12,7 @@ function Carrousel({ pictures }) {
         <div className={styles.carousel}>
             <button className={`${styles.arrows} ${styles.leftArrow}`} onClick={previousImage}>Image précédente</button>
             <button className={`${styles.arrows} ${styles.rightArrow}`} onClick={nextImage}>Image suivante</button>
+            <span className={styles.pagination}>{currentImage + 1}/{pictures.length}</span>
             <div className={styles.container}>
                 {
                     pictures.map((picture, index) =>

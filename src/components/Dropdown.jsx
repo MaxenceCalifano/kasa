@@ -29,7 +29,7 @@ function Dropdown({ title, text, open }) {
         }
     }
 
-    //Display or a list or a paragraph
+    //Display, or a list or a paragraph
     const textContent = typeof text === 'string'
         ? <p className={styles.textContent} onAnimationEnd={removeTransitionAttribute} ref={hiddable}>{text}</p>
         : <ul className={styles.textContent} onAnimationEnd={removeTransitionAttribute} ref={hiddable}>{text.map((element, index) => <li key={index}>{element}</li>)}</ul>
