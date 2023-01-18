@@ -41,13 +41,13 @@ function Dropdown({ title, text, open }) {
 
     return (
         <div className={styles.dropdown}>
-            <div className={styles.header} onClick={toggle}>
+            <button className={styles.header} onClick={toggle}>
                 <span>{title}</span>
                 <Chevron className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} />
-            </div>
+            </button>
 
             {textContent}
-        </div>
+        </div >
     );
 }
 

@@ -2,18 +2,15 @@ import Star from "../assets/Star.jsx";
 
 function Rate({ rating }) {
 
-    const stars = Array.from({ length: rating }).fill(1)
-    const blankStars = Array.from({ length: 5 - rating }).fill(0)
-    stars.push(...blankStars)
+    const stars = Array.from({ length: rating })
+    const blankStars = Array.from({ length: 5 - rating })
+
 
 
     return (
         <div>
-            {stars.map((star, index) => {
-                return star === 1 ?
-                    <Star color={'#FF6060'} key={index} />
-                    : <Star color={'#E3E3E3'} key={index} />
-            })}
+            {stars.map((star, index) => <Star color={'#FF6060'} key={index} />)}
+            {blankStars.map((star, index) => <Star color={"#E3E3E3"} key={index} />)}
         </div>
     );
 }
