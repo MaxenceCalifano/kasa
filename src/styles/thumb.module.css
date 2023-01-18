@@ -35,3 +35,11 @@
     color: white;
     margin: 0 10px;
 }
+
+@media screen and (max-width: 900px) {
+    .thumb {
+        width: 100%;
+        min-width: 335px;
+        height: 255px;
+    }
+}

@@ -1,4 +1,7 @@
+import Banner from "../components/Banner";
 import Dropdown from "../components/Dropdown";
+
+import styles from '../styles/about.module.css';
 
 function About() {
 
@@ -7,7 +10,8 @@ function About() {
     const service = "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
     const securite = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     return (
-        <div style={{ flexGrow: 2 }}>
+        <div className={styles.about}>
+            <Banner url={'url(about-banner.png)'} />
             <Dropdown title={"Fiabilité"} text={fiabilite} open={false} />
             <Dropdown title={"Respect"} text={respect} open={false} />
             <Dropdown title={"Service"} text={service} open={false} />

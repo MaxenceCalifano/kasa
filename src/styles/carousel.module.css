@@ -4,7 +4,7 @@
 
 .container {
     display: flex;
-    width: 80vw;
+    width: 100%;
     overflow: hidden;
     margin: auto;
     border-radius: 25px;
@@ -13,7 +13,7 @@
 .container img {
     height: 415px;
     object-fit: cover;
-    width: 80vw;
+    width: 100%;
     flex-shrink: 0;
     transition: margin 250ms ease;
 }
@@ -34,12 +34,12 @@
 
 .leftArrow {
     left: 12%;
-    background: url(../assets/left-arrow.png) center center / 48px 80px no-repeat;
+    background: url(../assets/left-arrow.png) center center / 46px 79px no-repeat;
 }
 
 .rightArrow {
     right: 12%;
-    background: url(../assets/right-arrow.png) center center / 48px 80px no-repeat;
+    background: url(../assets/right-arrow.png) center center / 46px 79px no-repeat;
 }
 
 .pagination {
@@ -48,4 +48,5 @@
     top: 400px;
     color: white;
     font-weight: 500;
+    font-size: 1.3rem;
 }

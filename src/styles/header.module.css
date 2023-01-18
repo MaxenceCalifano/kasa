@@ -6,7 +6,7 @@
     align-items: center;
     color: var(--primary-color);
     font-weight: 500;
-    width: 80%;
+    width: var(--content-width);
     margin: 1em auto;
 }
 

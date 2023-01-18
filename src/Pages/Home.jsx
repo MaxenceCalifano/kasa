@@ -1,6 +1,7 @@
 import styles from "../styles/home.module.css";
 import Thumb from "../components/Thumb";
 import { useEffect, useState } from "react";
+import Banner from "../components/Banner";
 
 function Home() {
     const [accomodations, setAccomodations] = useState([])
@@ -14,9 +15,9 @@ function Home() {
 
     return (
         <main>
-            <div className={styles.banner}>
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
+            <Banner url={'url(banner.png)'}>
+                Chez vous, partout et ailleurs
+            </Banner>
             <div className={styles.thumbs}>
                 {listOfAccomodations}
             </div>
