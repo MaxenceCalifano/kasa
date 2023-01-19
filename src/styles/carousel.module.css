@@ -34,12 +34,12 @@
 }
 
 .leftArrow {
-    left: 4%;
+    left: 12%;
     background: url(../assets/left-arrow.png) center center / 46px 79px no-repeat;
 }
 
 .rightArrow {
-    right: 4%;
+    right: 12%;
     background: url(../assets/right-arrow.png) center center / 46px 79px no-repeat;
 }
 
@@ -70,5 +70,13 @@
     .leftArrow,
     .rightArrow {
         background-size: 12px 20px;
+    }
+
+    .leftArrow {
+        left: 4%;
+    }
+
+    .rightArrow {
+        right: 4%;
     }
 }
