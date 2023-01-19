@@ -3,6 +3,7 @@
 
 .dropdown {
     max-width: 1023px;
+    min-width: 335px;
     margin: 2em auto;
 }
 
@@ -85,8 +86,12 @@ li {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .dropdown button {
         font-size: 0.7rem;
+    }
+
+    .dropdown {
+        margin: .5rem auto;
     }
 }

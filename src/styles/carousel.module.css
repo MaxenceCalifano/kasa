@@ -30,15 +30,16 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .leftArrow {
-    left: 12%;
+    left: 4%;
     background: url(../assets/left-arrow.png) center center / 46px 79px no-repeat;
 }
 
 .rightArrow {
-    right: 12%;
+    right: 4%;
     background: url(../assets/right-arrow.png) center center / 46px 79px no-repeat;
 }
 
@@ -49,4 +50,25 @@
     color: white;
     font-weight: 500;
     font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        height: 255px;
+    }
+
+    .arrows {
+        height: 285px;
+    }
+
+    .pagination {
+        top: 245px;
+        font-size: 0.7rem;
+    }
+
+    .leftArrow,
+    .rightArrow {
+        background-size: 12px 20px;
+    }
 }

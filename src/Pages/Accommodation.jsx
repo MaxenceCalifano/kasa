@@ -26,23 +26,23 @@ function Accommodation() {
     return (
         <main className={styles.accommodation}>
             <Carrousel pictures={accommodation.pictures} />
-            <div className={styles.flexDivs}>
-                <div>
-                    <p className={styles.title} >{accommodation.title}</p>
-                    <p className={styles.location} >{accommodation.location}</p>
+            <div className={styles.informations}>
+                <div className={styles.titleAndTag}>
+                    <div>
+                        <p className={styles.title} >{accommodation.title}</p>
+                        <p className={styles.location} >{accommodation.location}</p>
+                    </div>
+                    <div className={styles.tags}>
+                        {accommodation.tags.map((tag, key) => (
+                            <Tag key={key} tag={tag} />
+                        ))}
+                    </div>
                 </div>
 
-                <Host name={accommodation.host.name} picture={accommodation.host.picture} />
-            </div>
-
-            <div className={styles.flexDivs}>
-                <div className={styles.tags}>
-                    {accommodation.tags.map((tag, key) => (
-                        <Tag key={key} tag={tag} />
-                    ))}
+                <div className={styles.nameAndRate}>
+                    <Host name={accommodation.host.name} picture={accommodation.host.picture} />
+                    <Rate rating={accommodation.rating} />
                 </div>
-
-                <Rate rating={accommodation.rating} />
             </div>
 
 

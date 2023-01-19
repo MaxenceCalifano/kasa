@@ -2,7 +2,8 @@
 
 main {
     width: var(--content-width);
-    margin: auto;
+    margin: 0 auto;
+    flex-grow: 2;
 }
 
 .thumbs {

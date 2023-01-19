@@ -8,7 +8,7 @@ function Rate({ rating }) {
 
 
     return (
-        <div>
+        <div style={{ display: 'flex' }}>
             {stars.map((star, index) => <Star color={'#FF6060'} key={index} />)}
             {blankStars.map((star, index) => <Star color={"#E3E3E3"} key={index} />)}
         </div>
