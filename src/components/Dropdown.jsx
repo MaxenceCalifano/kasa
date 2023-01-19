@@ -9,6 +9,7 @@ function Dropdown({ title, text, open }) {
 
     useEffect(() => {
         isOpen ? hiddable.current.style.display = "block" : hiddable.current.style.display = "none"
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const toggle = () => {

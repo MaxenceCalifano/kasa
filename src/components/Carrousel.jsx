@@ -30,10 +30,7 @@ function Carrousel({ pictures }) {
             <div className={styles.container}>
                 {
                     pictures.map((picture, index) =>
-                        //  index === 0 ?
                         <img style={index === 0 ? { marginLeft: '-' + currentImage * 100 + '%' } : {}} src={picture} alt="le logement" key={index} />
-                        /*   :
-                          <img src={picture} alt="le logement" key={index} /> */
                     )
                 }
             </div>
