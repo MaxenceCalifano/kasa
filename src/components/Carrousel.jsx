@@ -1,9 +1,16 @@
 import styles from '../styles/carousel.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Carrousel({ pictures }) {
 
     const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "ArrowRight") nextImage();
+            if (e.key === "ArrowLeft") previousImage();
+        })
+    })
 
     const nextImage = () => setCurrentImage(currentImage === pictures.length - 1 ? 0 : currentImage + 1)
     const previousImage = () => setCurrentImage(currentImage === 0 ? pictures.length - 1 : currentImage - 1)
