@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kasa/static/css/main.b3499204.css",
+    "main.js": "/kasa/static/js/main.01a382cc.js",
+    "index.html": "/kasa/index.html",
+    "static/media/chevron.svg": "/kasa/static/media/chevron.78bd04c58743a7da8d3cf86f2cc23063.svg",
+    "main.b3499204.css.map": "/kasa/static/css/main.b3499204.css.map",
+    "main.01a382cc.js.map": "/kasa/static/js/main.01a382cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3499204.css",
+    "static/js/main.01a382cc.js"
+  ]
+}
