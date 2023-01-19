@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Carrousel from "../components/Carrousel";
 import Tag from "../components/Tag";
@@ -11,15 +11,16 @@ import styles from '../styles/accommodation.module.css';
 function Accommodation() {
     //Get accommodation id the url
     let { id } = useParams();
+    const navigate = useNavigate();
 
     const [accommodation, setAccommodation] = useState(null);
-    console.log("🚀 ~ file: Accommodation.jsx:13 ~ Accommodation ~ accommodation", accommodation)
+    //console.log("🚀 ~ file: Accommodation.jsx:13 ~ Accommodation ~ accommodation", accommodation)
 
     useEffect(() => {
         fetch('../logements.json')
             .then(response => response.json())
-            .then(res => setAccommodation(res.find(elem => elem.id === id)))
-    }, [id])
+            .then(res => res.find(elem => elem.id === id) ? setAccommodation(res.find(elem => elem.id === id)) : navigate("/"))
+    }, [id, navigate])
 
     if (!accommodation) return null
 
