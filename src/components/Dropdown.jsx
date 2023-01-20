@@ -8,9 +8,8 @@ function Dropdown({ title, text, open }) {
     const [isOpen, setIsOpen] = useState(open)
 
     useEffect(() => {
-        isOpen ? hiddable.current.style.display = "block" : hiddable.current.style.display = "none"
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+        open ? hiddable.current.style.display = "block" : hiddable.current.style.display = "none"
+    }, [open])
 
     const toggle = () => {
         //It's open and gonna close
