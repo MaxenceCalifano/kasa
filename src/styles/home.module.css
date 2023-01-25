@@ -2,7 +2,7 @@
 
 main {
     width: var(--content-width);
-    margin: 0 auto;
+    margin: 10px auto;
     flex-grow: 2;
 }
 
@@ -13,6 +13,7 @@ main {
     background: #F6F6F6;
     padding: 3%;
     border-radius: 25px;
+    margin: 4% 0;
 }
 
 @media screen and (max-width: 900px) {

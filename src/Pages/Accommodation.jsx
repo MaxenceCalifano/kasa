@@ -19,7 +19,7 @@ function Accommodation() {
     useEffect(() => {
         fetch('../logements.json')
             .then(response => response.json())
-            .then(res => res.find(elem => elem.id === id) ? setAccommodation(res.find(elem => elem.id === id)) : navigate("/"))
+            .then(res => res.find(elem => elem.id === id) ? setAccommodation(res.find(elem => elem.id === id)) : navigate("/error"))
     }, [id, navigate])
 
     if (!accommodation) return null
