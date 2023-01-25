@@ -30,10 +30,10 @@
 }
 
 .thumb p {
-    position: relative;
-    top: -40px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
     color: white;
-    margin: 0 10px;
 }
 
 @media screen and (max-width: 900px) {
